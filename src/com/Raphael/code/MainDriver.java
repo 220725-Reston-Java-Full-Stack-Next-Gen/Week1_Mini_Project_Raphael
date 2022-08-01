@@ -1,17 +1,14 @@
 package com.Raphael.code;
 
-import com.Raphael.code.Console.ConsoleIO;
 import com.Raphael.code.Console.IOFactory;
 import com.Raphael.code.Console.UserIO;
-
-import java.io.Console;
-import java.util.Scanner;
 
 public class MainDriver {
     public static void main(String[] args) {
         UserIO console = IOFactory.getUserIO("console");
         String name = console.getString("Enter a name for your thermometer: ");
 
+        char[] a = name.toCharArray();
         Thermometer thermometer = new Thermometer();
         thermometer.setName(name);
 
